@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Recipes Home Page</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Pocket Recipes</h1>
+            <h2>The cook book that fits right in your pocket</h2>
+        </div>
+        <!-- <div class="hero-img">
+            <img src="" alt="noodles">
+        </div> -->
+    </div> 
+
+    <div class="search">
+        <div class="icon">
+            <a href="index.html">
+                <img src="assets/logo-icon.svg" alt="cook book icon">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search recipes..." />
+            <button onclick="performSearch()">Search</button>
+            <p id="error-message" style="display: none; color: red;"></p>
+        </div>
+    </div>
+    
+    <div class="recipes">
+        <div class="filter">           
+            <div class="filter-text">
+                <p><strong>Protein</strong></p>
+            </div>
+            <div class="filter-buttons">
+                <button type="button">Chicken</button>
+                <button type="button">Turkey</button>
+                <button type="button">Beef</button>
+                <button type="button">Pork</button>
+                <button type="button">Fish</button>
+                <button type="button">Veg.</button>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Ancho Orange Chicken</h3>
+                <h4>with Kale Rice Roasted Carrots</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+            <div class="item-card">
+                <img src="assets/placeholder-min.png" alt="">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- <footer>
+        <h3>Fei Young, 2024</h3>
+    </footer> -->
+    <script src="scripts.js"></script>
+</body>
+</html>
