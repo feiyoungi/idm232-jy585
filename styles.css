@@ -15,12 +15,12 @@
 
 @font-face {
     font-family: "FFat";
-    src: url(/idm232-jy585/fonts/FranxurterTotallyFat-X3G4Z.ttf);
+    src: url(fonts/FranxurterTotallyFat-X3G4Z.ttf);
 }
 
 @font-face {
     font-family: "FMed";
-    src: url(/idm232-jy585/fonts/FranxurterTotallyMedium-gxwjp.ttf);
+    src: url(fonts/FranxurterTotallyMedium-gxwjp.ttf);
 }
 
 .hero {
