@@ -139,6 +139,19 @@ body {
     background-color: var(--dark-orange); 
 }
 
+@media (max-width: 768px) {
+    .search {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 90%; 
+        justify-content: center; 
+    }
+}
+
 #error-message {
     margin-left: 20px;
     margin-right: 20px;
@@ -189,9 +202,29 @@ body {
     border: 4px solid var(--dark-orange); 
 }
 
+@media (max-width: 768px) {
+    .recipes {
+
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+            "filter"
+            "items"; /* Filter at the top, items below */
+    }
+
+    .filter {
+        order: -1; /* Moves the filter section to the top */
+        padding-right: 20px;
+    }
+    
+    .items {
+        order: 1; /* Items stay below the filter */
+        padding-left: 40px;
+    }
+}
+
 .items {
     background-color: var(--dark-green); 
-    padding: 20px 40px 40px 30px;
+    padding: 20px 40px 40px 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
@@ -220,6 +253,18 @@ body {
 .item-card a {
     text-decoration: none;
     color: var(--off-black);
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .items {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .items {
+        grid-template-columns: 1fr; 
+    }
 }
 
 .recipes-content {
@@ -313,22 +358,21 @@ body {
 }
 
 .steps-card {
-    border: 1px solid #ccc; /* Optional: add some border around each step */
+    border: 1px solid #ccc; 
     padding: 15px;
-    border-radius: 10px; /* Optional: rounded corners */
+    border-radius: 10px; 
     background-color: #f9f9f9;
 }
 
 .steps-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Optional: adds rounded corners to the image */
+    border-radius: 10px; 
 }
 
-/* Responsive layout for smaller screens */
 @media (max-width: 768px) {
     .steps {
-        grid-template-columns: 1fr; /* Stacks into one column on smaller screens */
+        grid-template-columns: 1fr;
     }
 }
 
