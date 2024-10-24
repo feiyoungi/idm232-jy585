@@ -11,6 +11,7 @@
     --burnt-orange: #cc7d06;
     --dark-green: #0d4d1e;
     --light-green: #197f34;
+    --off-black: #1e1e1e;
 }
 
 @font-face {
@@ -44,7 +45,7 @@
     margin-bottom: 20px;
 }
 
-.hero-img {
+/* .hero-img {
     position: relative; 
     width: 100%; 
     overflow: visible;
@@ -57,6 +58,22 @@
     margin-left: -4%; 
     stroke: whitesmoke;
     stroke-width: 100%;;
+} */
+
+header {
+    padding: 40px 40px 20px 40px;
+    font-family: "FMed";
+    letter-spacing: 6px;
+}
+
+header a {
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header a:hover {
+    transform: scale(1.05);
 }
 
 body {
@@ -78,6 +95,10 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 } */
+
+.home {
+    
+}
 
 .search {
     display: grid;
@@ -193,7 +214,114 @@ body {
 .item-card img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
+
+.item-card a {
+    text-decoration: none;
+    color: var(--off-black);
+}
+
+.recipes-content {
+    color:var(--off-black);
+    margin: 0px 40px 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.recipes-info {
+    background-color: var(--orange);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.recipes-info h2{
+    font-family: "FMed";
+    letter-spacing: 6px;
+}
+
+.recipes-info h3{
+    font-family: "FMed";
+    letter-spacing: 6px;
+}
+
+.recipes-info p {
+    font-family: "Poppins";
+    margin-top: 10px;
+}
+
+.recipes-img {
+    display: flex;
+    justify-content: center;
+}
+
+.recipes-img img {
+    max-width: 100%; /*might want to make smaller later*/
+    height: auto;
+    border-radius: 20px;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .recipes-content {
+        grid-template-columns: 1fr; /* Stacks into one column on smaller screens */
+    }
+}
+
+.ingredients-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    align-items: center; 
+    margin: 20px 40px 20px 40px;
+    font-family: "Poppins";
+}
+
+.ingredients-img img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.ingredients-list {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.ingredients-list h2 {
+    font-family: "Fmed";
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .ingredients-content {
+        grid-template-columns: 1fr; /* Stacks into one column on smaller screens */
+    }
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 40px;
+    padding-top: 0px;
+}
+
+.back-button span {
+    margin-left: 10px;
+    font-family: "Poppins";
+}
+
+.back-button a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 
 
 
