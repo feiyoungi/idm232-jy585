@@ -402,6 +402,7 @@ body {
     align-items: center;
     cursor: pointer;
     padding: 40px;
+    padding-bottom: 20px;
     padding-top: 0px;
 }
 
@@ -413,6 +414,30 @@ body {
 .back-button a {
     text-decoration: none;
     color: whitesmoke;
+}
+
+.help-content {
+    margin: 0px 40px;
+    color: whitesmoke;
+}
+
+.help-content li {
+    font-family: "Poppins";
+}
+
+.help-content h3 {
+    font-family: "Poppins";
+    margin-top: 20px;
+}
+
+.help-content h2 {
+    font-family: "FMed";
+    letter-spacing: 6px;
+    padding-bottom: 10px;
+}
+
+.help-content li {
+    margin: 20px 40px;
 }
 
 
