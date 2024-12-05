@@ -12,16 +12,16 @@
 </head>
 <body>
 
-    <div class="hero">
-        <div class="hero-text">
-            <a href="index.php">
-                <h1>Pocket Recipes</h1>
-            </a>
-        </div>
-        <div class="help">
-            <button onclick="window.location.href='help.php';">Help</button>    
-        </div>
-    </div> 
+<div class="hero">
+    <div class="hero-text">
+        <a href="index.php">
+            <h1>Pocket Recipes</h1>
+        </a>
+    </div>
+    <div class="help">
+        <button onclick="window.location.href='help.php';">Help</button>    
+    </div>
+</div>
 
     <div class="help-content">
         <h2>How to Use and Navigate Through This Website</h2>

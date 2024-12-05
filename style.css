@@ -14,6 +14,8 @@
   --dark-green: #0d4d1e;
   --light-green: #197f34;
   --off-black: #1e1e1e;
+  --tan: #f6f0e8;
+  --green-text: #092215;
 }
 
 /* Fonts */ 
@@ -76,34 +78,34 @@
 
 .help-content li {
   font-family: "Poppins";
+  color: var(--green-text);
 }
 
 .help-content h3 {
   font-family: "Poppins";
   margin-top: 20px;
+  color: var(--green-text);
 }
 
 .help-content h2 {
-  font-family: "FMed";
-  letter-spacing: 6px;
-  padding-bottom: 10px;
+  font-family: "Poppins";
+  font-size: 2rem;
+  letter-spacing: 2px;
+  padding: 20px;
+  color: var(--green-text);
+  text-align: center;
 }
 
 .help-content li {
   margin: 20px 40px;
 }
 
-.statement {
-  font-family: "Poppins";
-  color: whitesmoke;
-}
-
 /* Body Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 20px;
-  background-color: var(--dark-green);
+  font-family: "Poppins";
+  color:var(--green-text);
+  /* padding: 20px; */
+  background-color: var(--tan);
 }
 
 /* Search Form */
@@ -111,6 +113,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .search-form input[type="text"] {
@@ -123,7 +126,7 @@ body {
 
 .search-form button {
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: var(--orange);
   color: white;
   border: none;
   border-radius: 4px;
@@ -133,7 +136,7 @@ body {
 }
 
 .search-form button:hover {
-  background-color: #0056b3;
+  background-color: var(--light-green);
 }
 
 /* Filter Button Container */
@@ -141,34 +144,27 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  flex-wrap: wrap; 
 }
 
 .filter-button form button {
   padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
+  background-color: var(--orange);
+  border: 10px solid var(--dark-orange);
+  color: whitesmoke;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
 .filter-button form button:hover {
   background-color: #218838;
+  transform: scale(1.1); 
 }
 
-/* Reset Button */
-.reset-button {
-  padding: 10px 20px;
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.reset-button:hover {
-  background-color: #c82333;
+.filter-button form button:active {
+  transform: scale(1);
 }
 
 /* Recipe Cards Display */
@@ -177,6 +173,8 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin: 20px 0px;
+  padding: 2% 15%;
 }
 
 /* Recipe Card Styles */
@@ -185,13 +183,13 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
-  padding: 20px;
+  padding: 0px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .recipe-card:hover {
-  transform: translateY(-10px);
+
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -207,12 +205,16 @@ body {
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .recipe-subtitle {
   font-size: 1.1em;
   color: #555;
   margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Recipe Information */
@@ -220,6 +222,7 @@ body {
   font-size: 14px;
   color: #666;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* Recipe Description */
@@ -270,4 +273,20 @@ body {
 
 .recipe-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .filter-button {
+    justify-content: center;
+  }
+
+  .filter-button form {
+    flex-basis: 100%; 
+    text-align: center; 
+  }
+
+  .filter-button form button {
+    width: 40%; /* Make buttons take 40% of the screen width */
+    margin-bottom: 10px; 
+  }
 }

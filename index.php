@@ -108,15 +108,26 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
     </div>
 </div>
 
-    <div class="statement">
+    <!-- <div class="statement">
         <h3>The cook book that fits right in your pocket</h3>
-    </div>
+    </div> -->
 
 <!-- Search Form -->
-<form action="index.php" method="get" class="search-form">
+<!-- <form action="index.php" method="get" class="search-form">
     <input type="text" name="search" placeholder="Search for recipes..." value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
     <button type="submit">Search</button>
-</form>
+</form> -->
+
+
+    <div class="search">
+        <div class="search-bar">
+            <!-- Search Form -->
+            <form action="index.php" method="get" class="search-form">
+                <input type="text" name="search" placeholder="Search for recipes..." value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
 
 <!-- Filter Buttons -->
 <div class="filter-button">
@@ -163,10 +174,10 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
             </a>
 
             <!-- Recipe Information -->
-            <!-- <p><strong>Cooking Time:</strong> <?php echo ($recipe['cook_time']); ?></p>
-            <p><strong>Serving Size:</strong> <?php echo ($recipe['serving_size']); ?></p>
+            <p><strong>Cooking Time:</strong> <?php echo ($recipe['cook_time']); ?></p>
+            <!-- <p><strong>Serving Size:</strong> <?php echo ($recipe['serving_size']); ?></p> -->
             <p><strong>Protein: </strong> <?php echo ($recipe['protein']); ?> </p>
-            <p><strong>Calories:</strong> <?php echo htmlspecialchars($recipe['calories']); ?> </p> -->
+            <!-- <p><strong>Calories:</strong> <?php echo htmlspecialchars($recipe['calories']); ?> </p> -->
 
             <!-- Recipe Description -->
             <!-- <p class="recipe-description"><?php echo ($recipe['description']); ?></p> -->
@@ -209,7 +220,7 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
     <?php if (count($recipes) > 0): ?>
         <!-- Display recipes as before -->
     <?php else: ?>
-        <p>No recipes found matching your search criteria.</p>
+        <p>No Results Found. Please Try Again.</p>
     <?php endif; ?>
 </div>
 

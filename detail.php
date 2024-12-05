@@ -32,7 +32,7 @@ if (!$recipe) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="detail.css">
     <title><?php echo $recipe['title']; ?> - Recipe Details</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,35 +53,69 @@ if (!$recipe) {
 </div>
 
 <div class="recipe-detail">
-    <!-- Recipe Title -->
-    <h1><?php echo $recipe['title']; ?></h1>
-    <h2><?php echo $recipe['subtitle']; ?></h2>
+    <div class="detail1">
+        <!-- Recipe Title -->
+        <h1><?php echo $recipe['title']; ?></h1>
+        <h2><?php echo $recipe['subtitle']; ?></h2><br>
 
-    <!-- Recipe Image -->
-    <img src="pics/pics/<?php echo $recipe['main_image']; ?>" alt="Recipe Image" class="recipe-image">
+        <!-- Recipe Information -->
+        <p><strong>Cooking Time:</strong> <?php echo $recipe['cook_time']; ?></p><br>
+        <p><strong>Serving Size:</strong> <?php echo $recipe['serving_size']; ?></p><br>
+        <p><strong>Protein:</strong> <?php echo $recipe['protein']; ?></p><br>
+        <p><strong>Calories:</strong> <?php echo $recipe['calories']; ?></p><br>
 
-    <!-- Recipe Information -->
-    <p><strong>Cooking Time:</strong> <?php echo $recipe['cook_time']; ?></p>
-    <p><strong>Serving Size:</strong> <?php echo $recipe['serving_size']; ?></p>
-    <p><strong>Protein:</strong> <?php echo $recipe['protein']; ?></p>
-    <p><strong>Calories:</strong> <?php echo $recipe['calories']; ?></p>
+        <!-- Recipe Description -->
+        <p><?php echo $recipe['description']; ?></p>
+    </div>
 
-    <!-- Recipe Description -->
-    <p><strong>Description:</strong> <?php echo $recipe['description']; ?></p>
+    <div class="detail2">
+        <!-- Recipe Image -->
+        <img src="pics/pics/<?php echo $recipe['main_image']; ?>" alt="Recipe Image" class="recipe-image">
+    </div>
+</div>
 
-    <!-- Ingredients List -->
-    <img src="pics/pics/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredient image" class="ingredient-image">
-    <h2>Ingredients</h2>
-    <ul>
-        <?php
-        $ingredients = explode('*', $recipe['ingredients']);
-        foreach ($ingredients as $ingredient) {
-            echo '<li>' . $ingredient . '</li>';
-        }
-        ?>
-    </ul>
+<div class="recipe-detail">
+    <div class="detail1">
+        <!-- Ingredients List -->
+        <img src="pics/pics/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredient image" class="ingredient-image">
+    </div>
 
-    <!-- Steps List -->
+    <!-- <div class="detail2">
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <div class="ingredients-container">
+            <ul>
+                <?php
+                    $ingredients = explode('*', $recipe['ingredients']);
+                    foreach ($ingredients as $ingredient) {
+                        echo '<li>' . $ingredient . '</li>';
+                    }
+                ?>
+            </ul>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="detail2">
+        <!-- <div class="ingredients"> -->
+            <!-- <h2>Ingredients</h2> -->
+            <div class="ingredients-container">
+            <!-- <ul> -->
+                <?php
+                    $ingredients = explode('*', $recipe['ingredients']);
+                    foreach ($ingredients as $ingredient) {
+                        echo '<li>' . $ingredient . '</li>';
+                    }
+                ?>
+            <!-- </ul> -->
+            </div>
+        <!-- </div> -->
+    </div>
+
+</div>
+
+<div class="steps">
+    <hr>
     <h2>Steps</h2>
     <div class="steps-container">
         <?php
@@ -92,22 +126,23 @@ if (!$recipe) {
             $stepParts = explode('^^', $step);
 
             if (count($stepParts) == 2) {
-                echo '<div class="step">';
-                // Display step number next to the title
-                echo '<strong>' . trim($stepParts[0]) . ' (' . ($index + 1) . '):</strong> ';
-                echo '<p>' . trim($stepParts[1]) . '</p>';
-
-                // Display the step image if available
+                echo '<div class="step-card">';
+                // Display the step image at the top
                 if (isset($images[$index])) {
-                    // Ensure that the image URL is valid
-                    echo '<img src="pics/pics/' . $images[$index] . '" alt="Step ' . ($index + 1) . ' Image" class="step-image">';
+                    echo '<img src="pics/pics/' . $images[$index] . '" alt="Step ' . ($index + 1) . ' Image" class="step-card-image">';
                 }
-
+                // Display step number and description
+                echo '<div class="step-card-content">';
+                echo '<strong>Step ' . ($index + 1) . ': ' . trim($stepParts[0]) . '</strong>';
+                echo '<p>' . trim($stepParts[1]) . '</p>';
+                echo '</div>';
                 echo '</div>';
             }
         }
         ?>
     </div>
 </div>
+
+
 </body>
 </html>

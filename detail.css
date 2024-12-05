@@ -1,5 +1,307 @@
-/*global reset*/
+/* General Reset and Box-Sizing */
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+/* Root */
+:root {
+    --orange: #f0a500;
+    --dark-orange:#e59400; 
+    --darker-orange: #c07d00;
+    --burnt-orange: #cc7d06;
+    --dark-green: #0d4d1e;
+    --light-green: #197f34;
+    --off-black: #1e1e1e;
+    --tan: #f6f0e8;
+    --green-text: #092215;
+}
+
+/* Fonts */ 
+@font-face {
+    font-family: "FFat";
+    src: url(fonts/FranxurterTotallyFat-X3G4Z.ttf);
+}
+
+@font-face {
+    font-family: "FMed";
+    src: url(fonts/FranxurterTotallyMedium-gxwjp.ttf);
+}
+
+/* Hero, Help Button, and Statement */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-green);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1{
+    font-family: "FMed";
+    color: whitesmoke;
+    letter-spacing: 6px;
+    padding: 20px;
+}
+
+.hero-text a  {
+    text-decoration: none;
+}
+
+.help {
+    text-align: right;
+    padding: 20px;
+    font-family: "Poppins";
+}
+
+.help button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: whitesmoke;
+    background-color: var(--orange);
+    border: 3px solid var(--dark-orange);
+}
+
+.help button:hover {
+    cursor: pointer;
+    background-color: var(--dark-orange);
+}
+
+.help-content {
+    margin: 0px 40px;
+    color: whitesmoke;
+}
+
+.help-content li {
+    font-family: "Poppins";
+}
+
+.help-content h3 {
+    font-family: "Poppins";
+    margin-top: 20px;
+}
+
+.help-content h2 {
+    font-family: "FMed";
+    letter-spacing: 6px;
+    padding-bottom: 10px;
+}
+
+.help-content li {
+    margin: 20px 40px;
+}
+
+.statement {
+    font-family: "Poppins";
+    color: whitesmoke;
+}
+
+/* Body Styles */
+body {
+    font-family: "Poppins";
+    color:var(--green-text);
+    /* padding: 20px; */
+    background-color: var(--tan);
+}
+
+/* Recipe Detail Section */ 
+.recipe-detail {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 20px; 
+    padding: 2% 15%; 
+}
+
+.detail1, .detail2 {
+    flex: 1; 
+    max-width: 48%; 
+}
+
+.detail2 h2 {
+    color: var(--tan);
+}
+
+li {
+    text-align: center;
+}
+.recipe-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+    border: 10px solid var(--dark-green); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.ingredient-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+.ingredients {
+    font-size: 1.5vw; 
+    line-height: 1.6; 
+    text-align: center;
+    padding: 1vw; 
+    justify-content: center;
+}
+
+.ingredients-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 1rem; 
+    padding: 0 20px; 
+}
+
+
+.ingredients h2 {
+    font-size: 2vw; 
+    margin-bottom: 1rem; 
+}
+
+.ingredients li {
+    font-size: 1.3vw;
+    margin-bottom: 0.5rem; 
+}
+
+/* Steps */ 
+.steps {
+    padding: 2% 15%;
+    text-align: center;
+}
+
+.steps h2 {
+    font-family: "Poppins";
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.step-card {
+    background-color: var(--tan);
+    border: 2px solid var(--dark-green);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 450px; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.step-card-image {
+    width: 100%; 
+    height: auto; 
+    border-bottom: 2px solid var(--dark-green); 
+}
+
+.step-card-content {
+    padding: 10px;
+}
+
+.step-card-content strong {
+    font-family: "Poppins";
+    font-size: 1.2em;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+.step-card-content p {
+    font-family: "Poppins";
+    font-size: 1em;
+    color: var(--green-text);
+}
+
+@media (max-width: 1200px) {
+    .ingredients {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    .ingredients h2 {
+        font-size: 1.8rem;
+    }
+    .ingredients li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ingredients {
+        font-size: 1rem;
+        text-align: center; 
+        padding: 0.5rem;
+    }
+    .ingredients h2 {
+        font-size: 1.5rem;
+    }
+    .ingredients li {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .recipe-detail h1 {
+        font-size: 2rem; 
+    }
+    .recipe-detail h2 {
+        font-size: 1.8rem;
+    }
+    .recipe-detail p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-detail h1 {
+        font-size: 1.8rem;
+    }
+    .recipe-detail h2 {
+        font-size: 1.6rem;
+    }
+    .recipe-detail p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-detail {
+        flex-direction: column; 
+        padding: 2% 5%; 
+        gap: 10px; 
+    }
+
+    .detail1, .detail2 {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+
+    .detail2 {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        text-align: center;
+    }
+
+    .ingredients {
+        margin: 0 auto; 
+    }
 }
