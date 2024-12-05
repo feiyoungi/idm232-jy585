@@ -1,0 +1,273 @@
+/* General Reset and Box-Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root */
+:root {
+  --orange: #f0a500;
+  --dark-orange:#e59400; 
+  --darker-orange: #c07d00;
+  --burnt-orange: #cc7d06;
+  --dark-green: #0d4d1e;
+  --light-green: #197f34;
+  --off-black: #1e1e1e;
+}
+
+/* Fonts */ 
+@font-face {
+  font-family: "FFat";
+  src: url(fonts/FranxurterTotallyFat-X3G4Z.ttf);
+}
+
+@font-face {
+  font-family: "FMed";
+  src: url(fonts/FranxurterTotallyMedium-gxwjp.ttf);
+}
+
+/* Hero, Help Button, and Statement */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-green);
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1{
+  font-family: "FMed";
+  color: whitesmoke;
+  letter-spacing: 6px;
+  padding: 20px;
+}
+
+.hero-text a  {
+  text-decoration: none;
+}
+
+.help {
+  text-align: right;
+  padding: 20px;
+  font-family: "Poppins";
+}
+
+.help button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: whitesmoke;
+  background-color: var(--orange);
+  border: 3px solid var(--dark-orange);
+}
+
+.help button:hover {
+  cursor: pointer;
+  background-color: var(--dark-orange);
+}
+
+.help-content {
+  margin: 0px 40px;
+  color: whitesmoke;
+}
+
+.help-content li {
+  font-family: "Poppins";
+}
+
+.help-content h3 {
+  font-family: "Poppins";
+  margin-top: 20px;
+}
+
+.help-content h2 {
+  font-family: "FMed";
+  letter-spacing: 6px;
+  padding-bottom: 10px;
+}
+
+.help-content li {
+  margin: 20px 40px;
+}
+
+.statement {
+  font-family: "Poppins";
+  color: whitesmoke;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  background-color: var(--dark-green);
+}
+
+/* Search Form */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Filter Button Container */
+.filter-button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-button form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-button form button:hover {
+  background-color: #218838;
+}
+
+/* Reset Button */
+.reset-button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #c82333;
+}
+
+/* Recipe Cards Display */
+.recipe-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Recipe Card Styles */
+.recipe-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Recipe Image */
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Recipe Title and Subtitle */
+.recipe-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.recipe-subtitle {
+  font-size: 1.1em;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Recipe Information */
+.recipe-card p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Recipe Description */
+.recipe-description {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Ingredients List */
+.ingredients-list {
+  list-style-type: none;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.ingredients-list li {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Steps Section */
+.steps-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.step {
+  margin-bottom: 10px;
+}
+
+.step strong {
+  font-weight: bold;
+}
+
+.step p {
+  font-size: 14px;
+  color: #333;
+  margin-left: 10px;
+}
+
+/* Recipe Link */
+.recipe-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-link:hover {
+  text-decoration: underline;
+}
