@@ -15,7 +15,11 @@
   --light-green: #197f34;
   --off-black: #1e1e1e;
   --tan: #f6f0e8;
-  --green-text: #092215;
+  --green-text: #0b2b1b;
+}
+
+strong {
+  color: var(--green-text);
 }
 
 /* Fonts */ 
@@ -29,7 +33,7 @@
   src: url(fonts/FranxurterTotallyMedium-gxwjp.ttf);
 }
 
-/* Hero, Help Button, and Statement */
+/* Hero, Help Button, Case-Study Button, and Statement */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -54,13 +58,13 @@
 
 .help {
   text-align: right;
-  padding: 20px;
+  padding-right: 20px;
   font-family: "Poppins";
 }
 
 .help button {
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 30px;
   color: whitesmoke;
   background-color: var(--orange);
   border: 3px solid var(--dark-orange);
@@ -104,11 +108,15 @@
 body {
   font-family: "Poppins";
   color:var(--green-text);
-  /* padding: 20px; */
   background-color: var(--tan);
 }
 
 /* Search Form */
+
+.search {
+  margin: 2% 15%;
+}
+
 .search-form {
   display: flex;
   justify-content: center;
@@ -119,24 +127,27 @@ body {
 .search-form input[type="text"] {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 300px;
+  border: 3px solid var(--dark-orange);
+  border-radius: 30px 0px 0px 30px;
+  width: 100%;
+  outline: none;
+  border-right: none;
 }
 
 .search-form button {
-  padding: 10px 20px;
   background-color: var(--orange);
-  color: white;
-  border: none;
-  border-radius: 4px;
+  color: whitesmoke;
+  border: 3px solid var(--dark-orange);
+  border-left: none;
+  border-radius: 0px 30px 30px 0;
+  padding: 10px 20px;
   cursor: pointer;
-  font-size: 16px;
-  margin-left: 10px;
+  font-family: "Poppins";
+  outline: none;
 }
 
 .search-form button:hover {
-  background-color: var(--light-green);
+  background-color: var(--dark-orange);
 }
 
 /* Filter Button Container */
@@ -159,12 +170,12 @@ body {
 }
 
 .filter-button form button:hover {
-  background-color: #218838;
+  background-color: var(--dark-orange);
   transform: scale(1.1); 
 }
 
 .filter-button form button:active {
-  transform: scale(1);
+  transform: scale(1); /* Reset scale when clicked */
 }
 
 /* Recipe Cards Display */
@@ -189,7 +200,6 @@ body {
 }
 
 .recipe-card:hover {
-
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -197,7 +207,8 @@ body {
 .recipe-image {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 8px 8px 0px 0px;
+  padding: 15px;
 }
 
 /* Recipe Title and Subtitle */
@@ -271,22 +282,103 @@ body {
   color: inherit;
 }
 
-.recipe-link:hover {
-  text-decoration: underline;
+/* Case-Study*/
+
+.case-study {
+  text-align: left;
+  padding-right: 20px;
+  font-family: "Poppins";
 }
 
+.case-study button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: whitesmoke;
+  background-color: var(--orange);
+  border: 3px solid var(--dark-orange);
+}
+.container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding-left:15%;
+  padding-right: 20%;
+  padding-top: 20px;
+}
+
+section {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+section img {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+section h1 {
+  color: var(--dark-green);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--dark-green);
+  padding-bottom: 5px;
+}
+
+section p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+ul li {
+  margin: 5px 0;
+  color: var(--text-color);
+}
+
+p strong {
+  color: var(--green-text);
+}
+
+.sad-carrot {
+  width: 60%;
+  align-items: center;
+  align-items: center;
+}
+
+.no-results-container {
+  text-align: center;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  font-family: "Poppins";
+  color: whitesmoke;
+  background-color: var(--dark-green);
+  padding: 20px;
+}
+
+/* Media Query for smaller screens */
 @media (max-width: 768px) {
   .filter-button {
-    justify-content: center;
+    justify-content: center; 
   }
 
   .filter-button form {
     flex-basis: 100%; 
-    text-align: center; 
+    text-align: center;
   }
 
   .filter-button form button {
-    width: 40%; /* Make buttons take 40% of the screen width */
+    width: 40%; 
     margin-bottom: 10px; 
   }
 }

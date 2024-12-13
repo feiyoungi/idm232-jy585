@@ -29,7 +29,7 @@
     src: url(fonts/FranxurterTotallyMedium-gxwjp.ttf);
 }
 
-/* Hero, Help Button, and Statement */
+/* Hero, Help Button, Case-Study Button, and Statement */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -54,13 +54,13 @@
 
 .help {
     text-align: right;
-    padding: 20px;
+    padding-right: 20px;
     font-family: "Poppins";
 }
 
 .help button {
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 30px;
     color: whitesmoke;
     background-color: var(--orange);
     border: 3px solid var(--dark-orange);
@@ -78,33 +78,32 @@
 
 .help-content li {
     font-family: "Poppins";
+    color: var(--green-text);
 }
 
 .help-content h3 {
     font-family: "Poppins";
     margin-top: 20px;
+    color: var(--green-text);
 }
 
 .help-content h2 {
-    font-family: "FMed";
-    letter-spacing: 6px;
-    padding-bottom: 10px;
+    font-family: "Poppins";
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: 20px;
+    color: var(--green-text);
+    text-align: center;
 }
 
 .help-content li {
     margin: 20px 40px;
 }
 
-.statement {
-    font-family: "Poppins";
-    color: whitesmoke;
-}
-
 /* Body Styles */
 body {
     font-family: "Poppins";
     color:var(--green-text);
-    /* padding: 20px; */
     background-color: var(--tan);
 }
 
@@ -137,22 +136,24 @@ li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
+.ingredients h2{
+    font-family: "Poppins";
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ingredients{
+    padding: 2% 15%
+}
 .ingredient-image {
     width: 100%; 
     height: auto; 
     border-radius: 10px;
 }
 
-.ingredients {
-    font-size: 1.5vw; 
-    line-height: 1.6; 
-    text-align: center;
-    padding: 1vw; 
-    justify-content: center;
-}
-
 .ingredients-container {
-    display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
     align-items: center; 
@@ -160,15 +161,8 @@ li {
     padding: 0 20px; 
 }
 
-
-.ingredients h2 {
-    font-size: 2vw; 
-    margin-bottom: 1rem; 
-}
-
-.ingredients li {
-    font-size: 1.3vw;
-    margin-bottom: 0.5rem; 
+.ingredients-container li {
+    text-align: left;
 }
 
 /* Steps */ 
@@ -192,8 +186,7 @@ li {
 }
 
 .step-card {
-    background-color: var(--tan);
-    border: 2px solid var(--dark-green);
+    background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 450px; 
@@ -228,37 +221,19 @@ li {
     color: var(--green-text);
 }
 
-@media (max-width: 1200px) {
-    .ingredients {
-        font-size: 1.2rem;
-        padding: 1rem;
-    }
-    .ingredients h2 {
-        font-size: 1.8rem;
-    }
-    .ingredients li {
-        font-size: 1rem;
-    }
+/* Footer */
+footer {
+    text-align: center;
+    font-family: "Poppins";
+    color: whitesmoke;
+    background-color: var(--dark-green);
+    padding: 20px;
 }
 
-@media (max-width: 768px) {
-    .ingredients {
-        font-size: 1rem;
-        text-align: center; 
-        padding: 0.5rem;
-    }
-    .ingredients h2 {
-        font-size: 1.5rem;
-    }
-    .ingredients li {
-        font-size: 0.9rem;
-    }
-}
-
-
+/* General Media Queries */
 @media (max-width: 1200px) {
     .recipe-detail h1 {
-        font-size: 2rem; 
+        font-size: 2rem; /* Adjust for smaller screens */
     }
     .recipe-detail h2 {
         font-size: 1.8rem;
@@ -268,7 +243,26 @@ li {
     }
 }
 
+@media (max-width: 1093px) {
+    .recipe-detail {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; 
+    }
+    .detail1, .detail2 {
+        max-width: 100%; /* Full width for stacked items */
+    }
+    .recipe-image,
+    .ingredient-image {
+        margin: 0 auto; 
+    }
+}
+
 @media (max-width: 768px) {
+    .recipe-detail {
+        flex-direction: column; 
+        padding: 2% 5%; /* Reduce padding */
+        gap: 10px; /* Adjust gap between stacked items */
+    }
     .recipe-detail h1 {
         font-size: 1.8rem;
     }
@@ -278,21 +272,6 @@ li {
     .recipe-detail p {
         font-size: 0.9rem;
     }
-}
-
-@media (max-width: 768px) {
-    .recipe-detail {
-        flex-direction: column; 
-        padding: 2% 5%; 
-        gap: 10px; 
-    }
-
-    .detail1, .detail2 {
-        max-width: 100%; 
-    }
-}
-
-@media (max-width: 768px) {
 
     .detail2 {
         display: flex;
@@ -300,8 +279,5 @@ li {
         align-items: center; 
         text-align: center;
     }
-
-    .ingredients {
-        margin: 0 auto; 
-    }
 }
+

@@ -37,20 +37,20 @@ if (!$recipe) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-<div class="hero">
-    <div class="hero-text">
-        <a href="index.php">
-            <h1>Pocket Recipes</h1>
-        </a>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-text">
+            <a href="index.php">
+                <h1>Pocket Recipes</h1>
+            </a>
+        </div>
+        <div class="help">
+            <button onclick="window.location.href='help.php';">Help</button>    
+        </div>
     </div>
-    <div class="help">
-        <button onclick="window.location.href='help.php';">Help</button>    
-    </div>
-</div>
 
 <div class="recipe-detail">
     <div class="detail1">
@@ -74,7 +74,12 @@ if (!$recipe) {
     </div>
 </div>
 
-<div class="recipe-detail">
+<div class="ingredients">
+    <hr>
+    <h2>Ingredients</h2>
+</div>
+
+<div class="recipe-detail">  
     <div class="detail1">
         <!-- Ingredients List -->
         <img src="pics/pics/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredient image" class="ingredient-image">
@@ -100,14 +105,14 @@ if (!$recipe) {
         <!-- <div class="ingredients"> -->
             <!-- <h2>Ingredients</h2> -->
             <div class="ingredients-container">
-            <!-- <ul> -->
+            <ul>
                 <?php
                     $ingredients = explode('*', $recipe['ingredients']);
                     foreach ($ingredients as $ingredient) {
                         echo '<li>' . $ingredient . '</li>';
                     }
                 ?>
-            <!-- </ul> -->
+            </ul>
             </div>
         <!-- </div> -->
     </div>
@@ -143,6 +148,9 @@ if (!$recipe) {
     </div>
 </div>
 
-
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pocket Recipes. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
