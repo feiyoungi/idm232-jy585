@@ -48,7 +48,7 @@ if (!$recipe) {
             </a>
         </div>
         <div class="help">
-            <button onclick="window.location.href='help.php';">Help</button>    
+            <button onclick="window.location.href='help.html';">Help</button>    
         </div>
     </div>
 
