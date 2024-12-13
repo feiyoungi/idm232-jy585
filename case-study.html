@@ -68,21 +68,58 @@
 
         <section class="process-insight">
             <h1>Process and Insight</h1>
-            <h2>Alpha</h2>
-            <img src="pics/alpha-home-min.jpg" alt="Alpha">
-            <h2>Beta</h2>
-            <h2>Case-Study</h2>
-            <h2>Final</h2>
+            <p>Below are some screenshots of how the design changed from the Alpha to the Beta and to the Final. Images are listed in that order.</p>
+            <h2>Home Page</h2>
+            <ul>
+                <li><p><strong>Alpha:</strong> The home screen used a two-column grid layout with the protein filter and recipe section. The recipe cards were displayed in a grid, and the number of columns reduced as the screen size shrank.</p></li>
+                <li><p><strong>Beta:</strong> The layout shifted from a grid to using flexbox, which simplified the responsive design and reduced reliance on media queries. The protein filter was moved to the top to minimize negative space. Recipe cards wrapped around using flexbox as the screen got smaller.</p></li>
+                <li><p><strong>Final:</strong> The layout remained the same as the beta version. The only significant change was to the CSS, which altered the style of the protein filter.</p></li>
+            </ul>
+            <p>Overall, the transition to flexbox made the layout more flexible and easier to manage across different screen sizes, while the main structural changes involved the repositioning of the filter and refinements to the filter’s style.</p>
+            <img src="pics/alpha-home-min.jpg" alt="Alpha"><hr>
+            <img src="pics/beta-home-min.jpg" alt="Beta"><hr>
+            <img src="pics/final-home-min.jpg" alt="Final">
+            <h2>Detail Page</h2>
+            <ul>
+                <li><p><strong>Alpha:</strong> The detail page displayed content in two columns: one side for the image and the other for the text. The steps for the recipe were also shown in two columns, which switched to a single column as the screen size shrank.</p></li>
+                <li><p><strong>Beta:</strong> The structure of the detail page remained the same as in the alpha version, with the same two-column layout. However, there were some CSS changes to improve styling, though the overall format stayed consistent.</p></li>
+                <li><p><strong>Final:</strong> The detail page format remained unchanged from the beta version, with no significant structural modifications. The only update was further refinement of the CSS.</p></li>
+            </ul>
+            <p>The overall design of the detail page remained largely consistent, with changes primarily focused on styling adjustments rather than structural updates.</p>
+            <img src="pics/alpha-detail-min.jpg" alt="Alpha"><hr>
+            <img src="pics/beta-detail-min.jpg" alt="Beta">
+            <h2>Help Page</h2>
+            <ul>
+                <li><p><strong>Alpha:</strong> The help section was simple, with a text-heavy layout and minimal visuals. It was built using basic HTML and CSS.</p></li>
+                <li><p><strong>Beta:</strong> The help section remained unchanged in structure but received a color scheme update for a fresh look. The content layout stayed text-based without significant modifications.</p></li>
+                <li><p><strong>Final:</strong> The help section received additional styling by introducing a container for the information, which improved the organization and presentation of the text.</p></li>
+            </ul>
+            <p>Overall, the changes to the help section focused on enhancing its visual appeal and structure through the introduction of color and layout refinements. The content remained primarily text-based throughout.</p>
+            <img src="pics/alpha-help-min.jpg" alt="Alpha"><hr>
+            <img src="pics/beta-help-min.jpg" alt="Beta"><hr>
+            <img src="pics/final-help-min.jpg" alt="Final">
+            <h2>Search Results and Error Page</h2>
+            <ul>
+                <li><p><strong>Alpha:</strong> The search bar was pill-shaped, allowing users to type words or letters to get results. If a user typed something that wasn’t in the system, an error message appeared to the right of the search bar, and the recipe cards disappeared.</p></li>
+                <li><p><strong>Beta:</strong> The search bar's shape was changed to a square to experiment with a different look. The functionality remained the same, but with the integration of MySQL and PHP, the search could now filter not just by dish names but also by ingredients. If there were no matches, an error message would still appear, and the recipe cards would disappear.</p></li>
+                <li><p><strong>Final:</strong> The search bar returned to its original pill shape, maintaining the functionality from the beta version. The error message stayed the same, but to address the negative space, a photo was added alongside the error message.</p></li>
+            </ul>
+            <p>In summary, the search and error section underwent a change in the appearance of the search bar, shifting back and forth between pill and square shapes, while the functionality remained consistent. The error message layout was refined with the addition of a photo to improve visual balance.</p>
+            <img src="pics/alpha-error-min.jpg" alt="Alpha"><hr>
+            <img src="pics/beta-error-min.jpg" alt="Beta"><hr>
+            <img src="pics/final-error-min.jpg" alt="Final">
         </section>
 
         <section class="solution">
             <h1>The Solution</h1>
-            <p>Showcase the final design with detailed images, videos, and a link to the live project if available. Describe the defining features like UX, navigation structure, content strategy, or unique mobile attributes. Thoughtful descriptions complement your visuals and strengthen your case as a designer/developer.</p>
+            <div class="case-study">
+                <button onclick="window.location.href='index.php';">View Project!</button>    
+            </div>
         </section>
 
         <section class="results">
             <h1>The Results</h1>
-            <p>Summarize the success of the project with qualitative and quantitative metrics. Address the objectives from "The Context and Challenge" section. If this was client work, include a client testimonial. Wrap up by discussing lessons learned and changes you’d make to your approach in the future.</p>
+            <p>Throughout the course of this project, I gained valuable experience in database integration and PHP. I’m pleased with the outcome and feel that I accomplished the goals I set. The alpha phase provided a solid foundation, allowing me to get started, while the beta phase pushed me to develop as much as possible for a minimum viable product.</p>
         </section>
     </div>
 
@@ -90,7 +127,5 @@
     <footer>
         <p>&copy; 2024 Pocket Recipes. All Rights Reserved.</p>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
